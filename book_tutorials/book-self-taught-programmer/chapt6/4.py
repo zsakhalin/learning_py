@@ -7,7 +7,10 @@ for item in questions_list:
     print(item)
 
 for i in range(len(questions_list)):
-    questions_list[i] += "?"
+    questions_list[i] += "?"            # change item
+
+for k, item in enumerate(questions_list):
+    questions_list[k] += "["            # another way to change item
 
 print(questions_list)
 # print(help(list))
