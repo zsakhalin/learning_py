@@ -4,23 +4,35 @@ import dictionary
 
 word = dictionary.randomWord(3)
 attempts = 0
+looses = 0
 letters = len(word)
-dash = ["_"] * letters
+board = ["_"] * letters
 alphabet = list("abcdefjhigklmnopqrstuvwxyz")
-stages = ["", "________      ", "|      |      ", "|      0      ", "|     /|\     ", "|     / \     ", "|"]
+stages = ["________      ", "|      |      ", "|      0      ", "|     /|\     ", "|     / \     ", "|"]
 
 # while attempts >= 1:
 for stage in stages:
-    # letter = input("Enter letter: ")
-    letter = "".join(random.sample(alphabet, 1))
-    attempts += 1
+    letter = input("Enter letter: ")
+    # letter = "".join(random.sample(alphabet, 1))
     try:
-        dash[word.index(letter)] = letter
-        print(dash)
+        board[word.index(letter)] = letter
+        if "_" not in board:
+            print("Winner winner chicken dinner!")
+            break
+        print(f"continue with {board}")
+        continue
     except ValueError:
-        # print("try again")
-        for i in range(attempts):
-            print(stages[i])
+        print("\n".join(stages[:(attempts + 1)]) + "\n")
+        looses += 1
+    attempts += 1
+    if looses == len(stages):
+        print("Looser!")
+        break
 
-print(dash)
+print(f"your guess: {board}")
 print(word)
+
+# TODO:
+#  fix
+#  if looses == len(stages):
+#  when some letter guessed
