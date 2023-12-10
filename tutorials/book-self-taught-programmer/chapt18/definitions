@@ -14,3 +14,5 @@ git commit //save new version of project/changes in local repo
 git commit -m //save new version of project/changes in local repo with comment
 
 git push origin master //to publish your local commits
+
+git pull origin master // Fetch from and integrate with another repository or a local branch
