@@ -1,0 +1,16 @@
+git
+git clone <link> //
+git remote -v // <link>
+
+$ git remote -v
+origin  https://github.com/zsakhalin/learning_py.git (fetch)    // PULL from
+origin  https://github.com/zsakhalin/learning_py.git (push)     // PUSH to
+
+git status //не проиндексированные файлы - red - untracked/unstaged files
+git add <name> // проиндексировать <name> - green -  staged files - to update/include what will be committed
+get reset <name> // cancel staging <name> - to discard changes in working directory
+
+git commit //save new version of project/changes in local repo
+git commit -m //save new version of project/changes in local repo with comment
+
+git push origin master //to publish your local commits
