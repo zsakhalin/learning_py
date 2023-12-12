@@ -15,6 +15,6 @@ reversStr = ""
 stack = Stack()
 for i in str:
     stack.push(i)
-for i in range(stack.getSize()):
+for j in range(stack.getSize()):
     reversStr += stack.pop()
 print(reversStr)
