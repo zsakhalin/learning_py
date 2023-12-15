@@ -7,5 +7,5 @@ def isPalindrome(sequence):
 
 a = "qwertyytrewq"
 b = [1,1,10,1,1]
-# print(isPalindrome(a))
-# print(isPalindrome(b))
+print(isPalindrome(a.lower()))
+print(isPalindrome(b))
